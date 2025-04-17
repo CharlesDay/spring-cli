@@ -1,6 +1,7 @@
 Cache Manager CLI Tool
 ======================
 
+Code is deployed to [Azure Web Apps](https://spring-cli-d6fdhva8dyg8hya2.eastus2-01.azurewebsites.net/)
 A command-line interface (CLI) application built with Spring Boot and Spring Shell to interact with a cache management API (mocked for now). Provides commands to refresh, refill, get the content of specific caches, and list available cache names.
 
 Prerequisites
