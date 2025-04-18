@@ -23,3 +23,6 @@
 1744927664166:ls
 1744927922052:l
 1744927923509:help
+1744944174417:get-product --productId 1
+1744944186054:get-product --productId 2
+1744944191997:get-product --productId 23

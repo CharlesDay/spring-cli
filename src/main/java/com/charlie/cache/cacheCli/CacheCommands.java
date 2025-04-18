@@ -17,6 +17,7 @@ import java.util.Set;
 public class CacheCommands {
 
     private final MockCacheApiService cacheApiService;
+    private final PlaceholderService placeholderService;
 
     /**
      * Refreshes a specific cache by its name.
@@ -79,5 +80,14 @@ public class CacheCommands {
     @ShellMethod(key = "cache-names", value = "Gets all the cache names that the service knows about")
     public Set<String> getCacheNames() {
         return cacheApiService.getCacheNames();
+    }
+
+    @ShellMethod(key = "get-product", value = "Gets a product by ID")
+    public String getProductById(@ShellOption(help = "The id of the product.") String id) {
+        if (id == null || id.trim().isEmpty()) {
+            return "Error: Product ID cannot be empty.";
+        }
+        System.out.println("Sending get request for product: " + id + "...");
+        return placeholderService.getProducts(id);
     }
 }
